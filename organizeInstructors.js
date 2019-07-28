@@ -5,10 +5,10 @@ const organizeInstructors = function(instructors) {
   for (let i = 0; i < instructors.length; i++) {
     // if the course is Not in the object: set the value to be an array of the names
     if (!(instructors[i].course in sortedDict)) {
-      sortedDict[`${instructors[i].course}`] = [];
-      sortedDict[`${instructors[i].course}`].push(`${instructors[i].name}`);
+      sortedDict[instructors[i].course] = [];
+      sortedDict[instructors[i].course].push(instructors[i].name);
     } else {
-      sortedDict[`${instructors[i].course}`].push(`${instructors[i].name}`);
+      sortedDict[instructors[i].course].push(instructors[i].name);
     }
   }
   return sortedDict;

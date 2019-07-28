@@ -18,10 +18,10 @@ let calculateChange = function(total, cash) {
 
   for (let i = 0; i < currency.length; i++) {
     while (amtOwing >= currencyVal[i]) {
-      if (inv[`${currency[i]}`] == null) {
-        inv[`${currency[i]}`] = 0;
+      if (inv[currency[i]] == null) {
+        inv[currency[i]] = 0;
       }
-      inv[`${currency[i]}`] += 1;
+      inv[currency[i]] += 1;
       amtOwing -= currencyVal[i];
     }
   }
